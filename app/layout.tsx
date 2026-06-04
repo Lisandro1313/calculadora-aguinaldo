@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/site.config";
+import SiteNav from "@/components/SiteNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -60,7 +61,10 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body>{children}</body>
+      <body>
+        <SiteNav />
+        {children}
+      </body>
     </html>
   );
 }

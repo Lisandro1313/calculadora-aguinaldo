@@ -1,37 +1,5 @@
 import Link from "next/link";
-
-const TOOLS = [
-  {
-    href: "/",
-    emoji: "🎁",
-    titulo: "Calculadora de Aguinaldo",
-    desc: "Cuánto cobrás de SAC (aguinaldo)",
-  },
-  {
-    href: "/calculadora-sueldo-neto",
-    emoji: "💸",
-    titulo: "Calculadora de Sueldo Neto",
-    desc: "De sueldo bruto a sueldo en mano",
-  },
-  {
-    href: "/calculadora-indemnizacion",
-    emoji: "📄",
-    titulo: "Calculadora de Indemnización",
-    desc: "Cuánto te corresponde por despido",
-  },
-  {
-    href: "/calculadora-vacaciones",
-    emoji: "🏖️",
-    titulo: "Calculadora de Vacaciones",
-    desc: "Días que te corresponden y cuánto cobrás",
-  },
-  {
-    href: "/calculadora-horas-extra",
-    emoji: "⏰",
-    titulo: "Calculadora de Horas Extra",
-    desc: "Cuánto cobrás al 50% y al 100%",
-  },
-];
+import { TOOLS } from "@/lib/tools";
 
 /** Enlaza las calculadoras entre sí (bueno para el usuario y para el SEO). */
 export default function ToolsNav({ actual }: { actual: string }) {

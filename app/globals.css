@@ -38,6 +38,56 @@ body {
   padding: 0 16px;
 }
 
+/* Top navigation bar */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-nav-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.site-nav-brand {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-nav-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+.site-nav-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  padding: 6px 11px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.site-nav-link:hover {
+  background: #f1f5f9;
+  color: var(--brand-dark);
+}
+.site-nav-link.active {
+  background: var(--brand);
+  color: #fff;
+}
+
 /* Header */
 .site-header {
   background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 60%, #22c55e 140%);
