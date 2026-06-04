@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { siteConfig } from "@/site.config";
 import "./globals.css";
 
@@ -48,12 +47,17 @@ export default function RootLayout({
     <html lang="es-AR">
       <head>
         {adsense !== "" && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsense}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
+          <>
+            {/* Script literal de AdSense en el <head> para que el robot de
+                verificación lo detecte (no usar next/script aquí). */}
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsense}`}
+              crossOrigin="anonymous"
+            />
+            {/* Método de verificación alternativo por meta tag */}
+            <meta name="google-adsense-account" content={adsense} />
+          </>
         )}
       </head>
       <body>{children}</body>
