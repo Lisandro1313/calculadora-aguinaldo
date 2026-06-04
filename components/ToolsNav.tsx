@@ -13,6 +13,12 @@ const TOOLS = [
     titulo: "Calculadora de Sueldo Neto",
     desc: "De sueldo bruto a sueldo en mano",
   },
+  {
+    href: "/calculadora-indemnizacion",
+    emoji: "📄",
+    titulo: "Calculadora de Indemnización",
+    desc: "Cuánto te corresponde por despido",
+  },
 ];
 
 /** Enlaza las calculadoras entre sí (bueno para el usuario y para el SEO). */
