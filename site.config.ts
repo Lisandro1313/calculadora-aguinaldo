@@ -4,7 +4,7 @@
 // ============================================================
 
 export const siteConfig = {
-  // URL final de tu sitio (cambialo cuando lo despliegues, ej: https://calculadoraaguinaldo.com.ar)
+  // URL final de tu sitio (cambialo si después comprás un dominio propio, ej: https://calculadoraaguinaldo.com.ar)
   url: "https://calculadora-aguinaldo.vercel.app",
 
   // Tu ID de editor de Google AdSense. Ejemplo: "ca-pub-1234567890123456"
