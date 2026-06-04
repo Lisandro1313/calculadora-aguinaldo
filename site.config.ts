@@ -9,7 +9,7 @@ export const siteConfig = {
 
   // Tu ID de editor de Google AdSense. Ejemplo: "ca-pub-1234567890123456"
   // Mientras esté vacío "", los anuncios NO se cargan (perfecto para desarrollar).
-  adsenseClientId: "",
+  adsenseClientId: "ca-pub-4315834178017336",
 
   // IDs de cada bloque de anuncio que crees en AdSense (data-ad-slot).
   // Dejalos vacíos hasta tener AdSense aprobado.
