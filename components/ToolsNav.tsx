@@ -19,6 +19,12 @@ const TOOLS = [
     titulo: "Calculadora de Indemnización",
     desc: "Cuánto te corresponde por despido",
   },
+  {
+    href: "/calculadora-vacaciones",
+    emoji: "🏖️",
+    titulo: "Calculadora de Vacaciones",
+    desc: "Días que te corresponden y cuánto cobrás",
+  },
 ];
 
 /** Enlaza las calculadoras entre sí (bueno para el usuario y para el SEO). */
