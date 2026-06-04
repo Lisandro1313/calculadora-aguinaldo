@@ -192,6 +192,74 @@ select:focus {
   font-size: 24px;
 }
 
+/* Breakdown table */
+.breakdown {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 15px;
+}
+.breakdown td {
+  padding: 11px 6px;
+  border-bottom: 1px solid var(--line);
+}
+.breakdown td.pct {
+  color: var(--muted);
+  text-align: center;
+  width: 60px;
+}
+.breakdown td.amt {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.breakdown .total-row td {
+  font-weight: 700;
+  border-bottom: none;
+  border-top: 2px solid var(--ink);
+  color: var(--accent-dark);
+}
+
+/* Otras calculadoras / cross-links */
+.tools-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+@media (min-width: 560px) {
+  .tools-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.tool-link {
+  display: block;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.tool-link:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.tool-link .emoji {
+  font-size: 22px;
+}
+.tool-link strong {
+  display: block;
+  margin: 4px 0 2px;
+  font-size: 16px;
+}
+.tool-link span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
 /* Ad slot */
 .ad-slot {
   margin: 22px 0;

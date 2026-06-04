@@ -1,4 +1,5 @@
 import Calculadora from "@/components/Calculadora";
+import ToolsNav from "@/components/ToolsNav";
 import AdSlot from "@/components/AdSlot";
 
 const faqs = [
@@ -126,6 +127,9 @@ export default function Home() {
             </details>
           ))}
         </section>
+
+        <h2 style={{ fontSize: 18, margin: "10px 0 0" }}>Otras calculadoras</h2>
+        <ToolsNav actual="/" />
 
         <AdSlot slot="bottom" />
       </main>
