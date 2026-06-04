@@ -25,6 +25,12 @@ const TOOLS = [
     titulo: "Calculadora de Vacaciones",
     desc: "Días que te corresponden y cuánto cobrás",
   },
+  {
+    href: "/calculadora-horas-extra",
+    emoji: "⏰",
+    titulo: "Calculadora de Horas Extra",
+    desc: "Cuánto cobrás al 50% y al 100%",
+  },
 ];
 
 /** Enlaza las calculadoras entre sí (bueno para el usuario y para el SEO). */
