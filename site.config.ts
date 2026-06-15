@@ -7,6 +7,9 @@ export const siteConfig = {
   // URL final de tu sitio (cambialo si después comprás un dominio propio, ej: https://calculadoraaguinaldo.com.ar)
   url: "https://calculadora-aguinaldo.vercel.app",
 
+  // Email de contacto que aparece en la página de Contacto y la Política de Privacidad.
+  contactEmail: "lism.etcheverry@gmail.com",
+
   // Tu ID de editor de Google AdSense. Ejemplo: "ca-pub-1234567890123456"
   // Mientras esté vacío "", los anuncios NO se cargan (perfecto para desarrollar).
   adsenseClientId: "ca-pub-4315834178017336",

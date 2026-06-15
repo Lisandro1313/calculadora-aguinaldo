@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculadoraSueldoNeto from "@/components/CalculadoraSueldoNeto";
 import ToolsNav from "@/components/ToolsNav";
 import AdSlot from "@/components/AdSlot";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Calculadora de Sueldo Neto 2026 | De Bruto a En Mano (Argentina)",
@@ -95,6 +96,47 @@ export default function Page() {
           </ul>
         </section>
 
+        <section className="content">
+          <h2>Ejemplo práctico</h2>
+          <p>
+            Si tu sueldo bruto es de <strong>$1.000.000</strong>, los descuentos
+            de ley se calculan sobre ese monto:
+          </p>
+          <table className="breakdown">
+            <tbody>
+              <tr>
+                <td>Sueldo bruto</td>
+                <td className="amt">$1.000.000</td>
+              </tr>
+              <tr>
+                <td>Jubilación</td>
+                <td className="pct">11%</td>
+              </tr>
+              <tr>
+                <td>Ley 19.032 (PAMI)</td>
+                <td className="pct">3%</td>
+              </tr>
+              <tr>
+                <td>Obra social</td>
+                <td className="pct">3%</td>
+              </tr>
+              <tr>
+                <td>Total descontado</td>
+                <td className="amt">− $170.000</td>
+              </tr>
+              <tr className="total-row">
+                <td>Sueldo neto (en mano)</td>
+                <td className="amt">$830.000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Es decir, sobre un bruto de un millón cobrás{" "}
+            <strong>$830.000 en mano</strong>, siempre que tu sueldo no supere el
+            mínimo del Impuesto a las Ganancias.
+          </p>
+        </section>
+
         <AdSlot slot="inline" />
 
         <section className="content faq">
@@ -113,19 +155,10 @@ export default function Page() {
         <AdSlot slot="bottom" />
       </main>
 
-      <footer className="site-footer">
-        <div className="container">
-          <p>
-            Calculadora de Sueldo Neto · Herramienta gratuita para trabajadores
-            de Argentina 🇦🇷
-          </p>
-          <p className="disclaimer">
-            Cálculo estimado con fines informativos. No incluye Impuesto a las
-            Ganancias. Para tu liquidación final consultá tu recibo de sueldo
-            oficial.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter
+        nombre="Calculadora de Sueldo Neto"
+        disclaimer="Cálculo estimado con fines informativos. No incluye Impuesto a las Ganancias. Para tu liquidación final consultá tu recibo de sueldo oficial."
+      />
     </>
   );
 }

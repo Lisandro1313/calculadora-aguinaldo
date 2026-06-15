@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculadoraHorasExtra from "@/components/CalculadoraHorasExtra";
 import ToolsNav from "@/components/ToolsNav";
 import AdSlot from "@/components/AdSlot";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title:
@@ -99,6 +100,34 @@ export default function Page() {
           </ul>
         </section>
 
+        <section className="content">
+          <h2>Ejemplo práctico</h2>
+          <p>
+            Tomemos un sueldo de <strong>$800.000</strong> con una jornada
+            completa de <strong>200 horas mensuales</strong>. El valor de la hora
+            normal es:
+          </p>
+          <div className="formula-box">
+            $800.000 ÷ 200 = <b>$4.000</b> por hora normal
+          </div>
+          <p>Entonces cada hora extra se paga:</p>
+          <ul style={{ margin: "0 0 12px 20px", color: "#334155" }}>
+            <li>
+              <strong>Al 50%:</strong> $4.000 × 1,5 = <strong>$6.000</strong> la
+              hora.
+            </li>
+            <li>
+              <strong>Al 100%:</strong> $4.000 × 2 = <strong>$8.000</strong> la
+              hora.
+            </li>
+          </ul>
+          <p>
+            Si en el mes hiciste 10 horas al 50%, sumás{" "}
+            <strong>$60.000</strong> extra a tu sueldo. Si esas 10 fueran al 100%
+            (un domingo o feriado), serían <strong>$80.000</strong>.
+          </p>
+        </section>
+
         <AdSlot slot="inline" />
 
         <section className="content faq">
@@ -117,18 +146,10 @@ export default function Page() {
         <AdSlot slot="bottom" />
       </main>
 
-      <footer className="site-footer">
-        <div className="container">
-          <p>
-            Calculadora de Horas Extra · Herramienta gratuita para trabajadores
-            de Argentina 🇦🇷
-          </p>
-          <p className="disclaimer">
-            Cálculo estimado con fines informativos. Para tu liquidación final
-            consultá tu recibo de sueldo oficial.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter
+        nombre="Calculadora de Horas Extra"
+        disclaimer="Cálculo estimado con fines informativos. Para tu liquidación final consultá tu recibo de sueldo oficial."
+      />
     </>
   );
 }

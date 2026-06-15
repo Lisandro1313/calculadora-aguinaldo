@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculadoraIndemnizacion from "@/components/CalculadoraIndemnizacion";
 import ToolsNav from "@/components/ToolsNav";
 import AdSlot from "@/components/AdSlot";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title:
@@ -106,6 +107,37 @@ export default function Page() {
           <p>El aguinaldo proporcional correspondiente al preaviso.</p>
         </section>
 
+        <section className="content">
+          <h2>Ejemplo práctico</h2>
+          <p>
+            Imaginá un trabajador con <strong>3 años y 8 meses</strong> de
+            antigüedad, despedido sin causa, cuyo mejor sueldo bruto fue de{" "}
+            <strong>$800.000</strong>:
+          </p>
+          <ul style={{ margin: "0 0 12px 20px", color: "#334155" }}>
+            <li>
+              <strong>Antigüedad (art. 245):</strong> 3 años + una fracción mayor
+              a 3 meses = 4 sueldos → $800.000 × 4 = <strong>$3.200.000</strong>.
+            </li>
+            <li>
+              <strong>Preaviso:</strong> tiene menos de 5 años, así que es 1
+              sueldo = <strong>$800.000</strong>.
+            </li>
+            <li>
+              <strong>SAC sobre el preaviso:</strong> $800.000 ÷ 12 ≈{" "}
+              <strong>$66.667</strong>.
+            </li>
+          </ul>
+          <div className="formula-box">
+            Total ≈ $3.200.000 + $800.000 + $66.667 = <b>$4.066.667</b>
+          </div>
+          <p>
+            Este es un cálculo orientativo de los conceptos principales; podrían
+            sumarse vacaciones no gozadas, integración del mes de despido o
+            multas según el caso.
+          </p>
+        </section>
+
         <AdSlot slot="inline" />
 
         <section className="content faq">
@@ -124,18 +156,10 @@ export default function Page() {
         <AdSlot slot="bottom" />
       </main>
 
-      <footer className="site-footer">
-        <div className="container">
-          <p>
-            Calculadora de Indemnización · Herramienta gratuita para trabajadores
-            de Argentina 🇦🇷
-          </p>
-          <p className="disclaimer">
-            Cálculo estimado con fines informativos. No reemplaza el
-            asesoramiento de un abogado laboral ni la liquidación final oficial.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter
+        nombre="Calculadora de Indemnización"
+        disclaimer="Cálculo estimado con fines informativos. No reemplaza el asesoramiento de un abogado laboral ni la liquidación final oficial."
+      />
     </>
   );
 }

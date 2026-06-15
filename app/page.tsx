@@ -1,6 +1,7 @@
 import Calculadora from "@/components/Calculadora";
 import ToolsNav from "@/components/ToolsNav";
 import AdSlot from "@/components/AdSlot";
+import SiteFooter from "@/components/SiteFooter";
 
 const faqs = [
   {
@@ -99,6 +100,30 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="content">
+          <h2>Ejemplo práctico</h2>
+          <p>
+            Supongamos que trabajaste todo el semestre y tu mejor sueldo bruto
+            fue de <strong>$900.000</strong>. El aguinaldo se calcula así:
+          </p>
+          <div className="formula-box">
+            $900.000 ÷ 2 = <b>$450.000</b> de aguinaldo bruto
+          </div>
+          <p>
+            Ese es el monto bruto. Como al SAC se le aplican los descuentos de
+            ley (17%: jubilación, PAMI y obra social), en mano cobrarías
+            aproximadamente <strong>$373.500</strong>:
+          </p>
+          <div className="formula-box">
+            $450.000 − 17% = <b>$373.500</b> aproximados en mano
+          </div>
+          <p>
+            Y si solo trabajaste, por ejemplo, <strong>90 de los 181 días</strong>{" "}
+            del semestre, el aguinaldo proporcional sería: ($900.000 ÷ 2) × (90 ÷
+            181) = <strong>$223.756</strong> brutos.
+          </p>
+        </section>
+
         <AdSlot slot="inline" />
 
         <section className="content">
@@ -134,19 +159,10 @@ export default function Home() {
         <AdSlot slot="bottom" />
       </main>
 
-      <footer className="site-footer">
-        <div className="container">
-          <p>
-            Calculadora de Aguinaldo · Herramienta gratuita para trabajadores de
-            Argentina 🇦🇷
-          </p>
-          <p className="disclaimer">
-            Este sitio ofrece un cálculo estimado con fines informativos. Para
-            tu liquidación final consultá a tu empleador, contador o el recibo
-            de sueldo oficial.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter
+        nombre="Calculadora de Aguinaldo"
+        disclaimer="Este sitio ofrece un cálculo estimado con fines informativos. Para tu liquidación final consultá a tu empleador, contador o el recibo de sueldo oficial."
+      />
     </>
   );
 }

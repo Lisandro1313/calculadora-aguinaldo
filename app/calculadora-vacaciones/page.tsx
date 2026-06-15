@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CalculadoraVacaciones from "@/components/CalculadoraVacaciones";
 import ToolsNav from "@/components/ToolsNav";
 import AdSlot from "@/components/AdSlot";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title:
@@ -100,6 +101,27 @@ export default function Page() {
           </p>
         </section>
 
+        <section className="content">
+          <h2>Ejemplo práctico</h2>
+          <p>
+            Supongamos que tenés <strong>7 años de antigüedad</strong> y un
+            sueldo de <strong>$750.000</strong>. Como estás en el tramo de 5 a 10
+            años, te corresponden <strong>21 días corridos</strong> de
+            vacaciones.
+          </p>
+          <div className="formula-box">
+            Valor del día = $750.000 ÷ 25 = <b>$30.000</b>
+          </div>
+          <div className="formula-box">
+            Cobro de vacaciones = $30.000 × 21 = <b>$630.000</b>
+          </div>
+          <p>
+            Fijate que $630.000 es más que el sueldo de un mes ($750.000 ÷ 30 ×
+            21 = $525.000 por los mismos días), porque la ley manda dividir por
+            25 y no por 30. Esa diferencia es el "plus vacacional".
+          </p>
+        </section>
+
         <AdSlot slot="inline" />
 
         <section className="content faq">
@@ -118,18 +140,10 @@ export default function Page() {
         <AdSlot slot="bottom" />
       </main>
 
-      <footer className="site-footer">
-        <div className="container">
-          <p>
-            Calculadora de Vacaciones · Herramienta gratuita para trabajadores de
-            Argentina 🇦🇷
-          </p>
-          <p className="disclaimer">
-            Cálculo estimado con fines informativos. Para tu liquidación final
-            consultá tu recibo de sueldo oficial.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter
+        nombre="Calculadora de Vacaciones"
+        disclaimer="Cálculo estimado con fines informativos. Para tu liquidación final consultá tu recibo de sueldo oficial."
+      />
     </>
   );
 }
